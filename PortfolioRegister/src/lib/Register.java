@@ -16,15 +16,15 @@ public class Register {
 	
 	// Methods
 	
-	public void setAddRegister(ArrayList<Name> name) {
-		this.Name = name;
+	public void addName(Name name) {
+		this.Name.add(Name.size()+1, name);
 	}
 	
-	public void setRemoveRegister() {
+	public void removeName() {
 		// TODO
 	}
 	
-	public void setRegisterEmpty() {
+	public void clearRegister() {
 		Name.clear();
 	}
 	
@@ -38,25 +38,25 @@ public class Register {
 		return found;
 	}
 	
-	public int countFirstNameOccurances(CharSequence letter) {
+	public int countFirstNameOccurrences(char c) {
 		int i = 0;
 		for (Name n : Name) {
-			if (n.getFirstName().contains(letter)) {
+			if (n.getFirstName().endsWith(Character.toString(c))) {
 				i++;
 			}
 		}
 		return i;
 	}
 	
-	public Name getRegisterName() {
-		return Name.get(0);
+	public Name getName(int i) {
+		return Name.get(i);
 	}
 	
-	public int getRegisterSize() {
+	public int registerSize() {
 		return Name.size();
 	}
 	
-	public boolean getRegisterEmpty() {
+	public boolean isRegisterEmpty() {
 		return (Name.isEmpty()) ? true : false;
 	}
 	
