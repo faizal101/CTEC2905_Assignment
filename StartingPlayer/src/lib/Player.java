@@ -37,10 +37,10 @@ public class Player {
 	
 	/**
 	 * Sets the variable of `Name` to the inputed parameter.
-	 * @param Name The name the Player should have. (?)
+	 * @param name The name the Player should have. (?)
 	 */
-	public void setName(Name Name) {
-		this.name = Name;
+	public void setName(Name name) {
+		this.name = name;
 	}
 	
 	/**
@@ -55,10 +55,12 @@ public class Player {
 	 * Sets the full name of a player.
 	 * @param Name Full name of player.
 	 */
-	public void setFullPlayerName(String name) {
+	public void setFullPlayerName(String Name) {
 		// TODO
-		// Name fn = new Name();
-		// this.name = fn.setFirstName("Joe");
+		String out[] = Name.split(Name, ' ');
+		Name name = new Name();
+		name.setFirstName(out[0]);
+		name.setFamilyName(out[1]);
 	}
 	
 	/**
