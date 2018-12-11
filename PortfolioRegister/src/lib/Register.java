@@ -28,6 +28,26 @@ public class Register {
 		Name.clear();
 	}
 	
+	public boolean searchRegisterByFamilyName(String search) {
+		boolean found = false;
+		for (Name n : Name) {
+			if (n.getFamilyName() == search) {
+				found = true;
+			} 
+			}
+		return found;
+	}
+	
+	public int countFirstNameOccurances(CharSequence letter) {
+		int i = 0;
+		for (Name n : Name) {
+			if (n.getFirstName().contains(letter)) {
+				i++;
+			}
+		}
+		return i;
+	}
+	
 	public Name getRegisterName() {
 		return Name.get(0);
 	}
