@@ -20,9 +20,8 @@ public class Register {
 		this.Name.add(Name.size()+1, name);
 	}
 	
-	public Name removeName(int i) {
+	public void removeName(int i) {
 		Name.remove(i);
-		return Name.get(i);
 	}
 	
 	public void clearRegister() {
