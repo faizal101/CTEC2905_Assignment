@@ -90,7 +90,7 @@ public class Player {
 	
 	@Override
     public String toString() {
-    	return "Name:[name=" + name + ", Dice=" + PairOfDice + "]";
+    	return "Player:[" + name + ", Dice=" + PairOfDice + "]";
     }
 	
 }
