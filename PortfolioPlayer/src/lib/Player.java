@@ -6,7 +6,7 @@ public class Player {
 	// Fields
 	
 	private Name name;
-	private PairOfDice PairOfDice;
+	private Rollable PairOfDice;
 	
 	// Constructors
 	
@@ -28,7 +28,7 @@ public class Player {
 	 * @param name The name that will be given.
 	 * @param PairOfDice Consists of 2 die. (?)
 	 */
-	public Player(Name name, PairOfDice PairOfDice) {
+	public Player(Name name, Rollable PairOfDice) {
 		this.name = name;
 		this.PairOfDice = PairOfDice;
 	}
@@ -75,7 +75,7 @@ public class Player {
 	 * Returns the pair of dice.
 	 * @return PairOfDice
 	 */
-	public PairOfDice getPairOfDice() {
+	public Rollable getRollable() {
 		return PairOfDice;
 	}
 	
