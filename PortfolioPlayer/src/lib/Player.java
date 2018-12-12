@@ -79,6 +79,10 @@ public class Player {
 		return PairOfDice;
 	}
 	
+	public void rollDice() {
+		// TODO 
+	}
+	
 	@Override
     public String toString() {
     	return "Name:[name=" + name + ", Dice=" + PairOfDice + "]";
