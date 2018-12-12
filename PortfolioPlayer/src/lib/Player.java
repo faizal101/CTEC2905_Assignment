@@ -83,6 +83,11 @@ public class Player {
 		// TODO 
 	}
 	
+	public Rollable getDiceScore() {
+		// TODO
+		return this.PairOfDice;
+	}
+	
 	@Override
     public String toString() {
     	return "Name:[name=" + name + ", Dice=" + PairOfDice + "]";
