@@ -23,15 +23,17 @@ public class Player implements Comparable<Player>{
 	
 	public Player(Name name) {
 		this.name = name;
+		this.dice = new Die();
 	}
+	
 	/**
 	 * Default constructor that accepts a name and a dice.
 	 * @param name The name that will be given.
 	 * @param PairOfDice Consists of 2 die. (?)
 	 */
-	public Player(Name name, Rollable PairOfDice) {
+	public Player(Name name, Rollable dice) {
 		this.name = name;
-		this.dice = PairOfDice;
+		this.dice = dice;
 	}
 	
 	// Methods
@@ -48,8 +50,8 @@ public class Player implements Comparable<Player>{
 	 * Sets the number of pair of dice.
 	 * @param PairOfDice number.
 	 */
-	public void setPairOfDice(PairOfDice PairOfDice) {
-		this.dice = PairOfDice;
+	public void setPairOfDice(PairOfDice dice) {
+		this.dice = dice;
 	}
 	
 	/**
