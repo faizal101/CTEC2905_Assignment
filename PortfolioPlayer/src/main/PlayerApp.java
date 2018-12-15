@@ -10,20 +10,22 @@ public class PlayerApp {
 	public static String execute(ArrayList<Player> players, String fullName) {
 		
 		players.get(0).setFullPlayerName(fullName);
-		System.out.println(players.get(0).getName());
-		//String name = fullName;
-		//String[] out = name.split(" ");
-		
-		//players.add(0, new Player(new Name (out[0], out[1])));
-		//players.add(0, fullName);
-		
 		String word = "";
+		ArrayList<String> names = new ArrayList<String>();
 		for (Player player : players) {
-			word = player.getName().getFirstName().toLowerCase() + ", " + player.getName().getFamilyName().toUpperCase() 
-					+ "\n";
-			//word += p;
+			names.add(player.getName().getFullName());
+		}
+		for (String player : names) {
+			if(player.contains("a")) {
+				String name = player.trim();
+				int space = player.indexOf(" ");
+				String first = name.substring(0, space);
+				String last = name.substring(space);
+				
+				String p = first.toLowerCase() + "," + last.toUpperCase() + "\n";
+				word += p;
+			}
 		}
 		return word;
 	}
-	
 }
