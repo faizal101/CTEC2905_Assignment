@@ -7,13 +7,13 @@ public class Player implements Comparable<Player>{
 	// Fields
 	
 	private Name name;
-	private Rollable PairOfDice;
+	private Rollable dice;
 	
 	// Constructors
 	
 	public Player() {
 		this.name = new Name();
-		this.PairOfDice = new Die();
+		this.dice = new Die();
 	}
 	
 	/** 
@@ -31,7 +31,7 @@ public class Player implements Comparable<Player>{
 	 */
 	public Player(Name name, Rollable PairOfDice) {
 		this.name = name;
-		this.PairOfDice = PairOfDice;
+		this.dice = PairOfDice;
 	}
 	
 	// Methods
@@ -49,7 +49,7 @@ public class Player implements Comparable<Player>{
 	 * @param PairOfDice number.
 	 */
 	public void setPairOfDice(PairOfDice PairOfDice) {
-		this.PairOfDice = PairOfDice;
+		this.dice = PairOfDice;
 	}
 	
 	/**
@@ -57,12 +57,10 @@ public class Player implements Comparable<Player>{
 	 * @param Name Full name of player.
 	 */
 	public void setFullPlayerName(String Name) {
-		// TODO
-		
-		String out[] = Name.split(Name, ' ');
-		Name name = new Name();
-		name.setFirstName(out[0]);
-		name.setFamilyName(out[1]);
+		String name = Name;
+		String[] out = name.split(" ");
+		this.name.setFirstName(out[0]);
+		this.name.setFamilyName(out[1]);
 	}
 	
 	/**
@@ -78,11 +76,13 @@ public class Player implements Comparable<Player>{
 	 * @return PairOfDice
 	 */
 	public Rollable getRollable() {
-		return PairOfDice;
+		return dice;
 	}
 	
 	public void rollDice() {
-		// TODO 
+		Die die = new Die();
+		//die = x -- issue with this is that rollDice takes in no params, per UML
+		die.roll();
 	}
 	
 	public int getDiceScore() {
@@ -92,7 +92,7 @@ public class Player implements Comparable<Player>{
 	
 	@Override
     public String toString() {
-    	return "Player:[" + name + ", Dice=" + PairOfDice + "]";
+    	return "Player:[" + name + ", Dice=" + dice + "]";
     }
 
 	@Override
