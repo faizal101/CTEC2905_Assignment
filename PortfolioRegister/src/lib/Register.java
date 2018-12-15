@@ -1,8 +1,9 @@
 package lib;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Register {
+public class Register implements Iterable<Name>{
 	
 	// Fields
 	
@@ -63,6 +64,11 @@ public class Register {
 	@Override
 	public String toString() {
 		return "Register:[" + Name + "]";
+	}
+
+	@Override
+	public Iterator<Name> iterator() {
+		return Name.iterator();
 	}
 	
 }
