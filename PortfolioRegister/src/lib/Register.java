@@ -11,13 +11,13 @@ public class Register {
 	// Constructors
 	
 	public Register() {
-		Name = " ";
+		Name = new ArrayList<Name>();
 	}
 	
 	// Methods
 	
 	public void addName(Name name) {
-		this.Name.add(Name.size()+1, name);
+		this.Name.add(name);
 	}
 	
 	public void removeName(int i) {
