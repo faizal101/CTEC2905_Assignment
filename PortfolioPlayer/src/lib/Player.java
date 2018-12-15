@@ -1,7 +1,8 @@
 package lib;
+
 import lib.Name;
 
-public class Player {
+public class Player implements Comparable<Player>{
 	
 	// Fields
 	
@@ -11,8 +12,8 @@ public class Player {
 	// Constructors
 	
 	public Player() {
-		this.name = "";
-		this.PairOfDice = 0;
+		this.name = new Name();
+		this.PairOfDice = null;
 	}
 	
 	/** 
@@ -57,6 +58,7 @@ public class Player {
 	 */
 	public void setFullPlayerName(String Name) {
 		// TODO
+		
 		String out[] = Name.split(Name, ' ');
 		Name name = new Name();
 		name.setFirstName(out[0]);
@@ -83,14 +85,19 @@ public class Player {
 		// TODO 
 	}
 	
-	public Rollable getDiceScore() {
-		// TODO
-		return this.PairOfDice;
+	public int getDiceScore() {
+		Die die = new Die();
+		return die.getScore();
 	}
 	
 	@Override
     public String toString() {
     	return "Player:[" + name + ", Dice=" + PairOfDice + "]";
     }
+
+	@Override
+	public int compareTo(Player o) {
+		return this.name.compareTo(o.name);
+	}
 	
 }
