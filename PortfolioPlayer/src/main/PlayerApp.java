@@ -17,12 +17,8 @@ public class PlayerApp {
 		}
 		for (String player : names) {
 			if(player.contains("a")) {
-				String name = player.trim();
-				int space = player.indexOf(" ");
-				String first = name.substring(0, space);
-				String last = name.substring(space);
-				
-				String p = first.toLowerCase() + "," + last.toUpperCase() + "\n";
+				String[] out = player.split(" ");
+				String p = out[0].toLowerCase() + ", " + out[1].toUpperCase() + "\n";
 				word += p;
 			}
 		}
