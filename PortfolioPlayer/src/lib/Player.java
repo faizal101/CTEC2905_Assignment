@@ -79,9 +79,7 @@ public class Player implements Comparable<Player>{
 	}
 	
 	public void rollDice() {
-		Die die = new Die();
-		//die = x -- issue with this is that rollDice takes in no params, per UML
-		die.roll();
+		this.dice.roll();
 	}
 	
 	public int getDiceScore() {
