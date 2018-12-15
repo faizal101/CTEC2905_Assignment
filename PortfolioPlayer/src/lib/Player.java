@@ -57,8 +57,7 @@ public class Player implements Comparable<Player>{
 	 * @param Name Full name of player.
 	 */
 	public void setFullPlayerName(String Name) {
-		String name = Name;
-		String[] out = name.split(" ");
+		String[] out = Name.split(" ");
 		this.name.setFirstName(out[0]);
 		this.name.setFamilyName(out[1]);
 	}
