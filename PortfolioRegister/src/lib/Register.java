@@ -20,8 +20,8 @@ public class Register {
 		this.Name.add(name);
 	}
 	
-	public void removeName(int i) {
-		Name.remove(i);
+	public Name removeName(int i) {
+		return Name.remove(i);
 	}
 	
 	public void clearRegister() {
@@ -31,9 +31,9 @@ public class Register {
 	public boolean searchRegisterByFamilyName(String search) {
 		boolean found = false;
 		for (Name n : Name) {
-			if (n.getFamilyName() == search) {
+			if (n.getFamilyName().equals(search)) {
 				found = true;
-			} 
+			}
 			}
 		return found;
 	}
