@@ -1,6 +1,7 @@
 package lib;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class Register implements Iterable<Name>{
@@ -59,6 +60,10 @@ public class Register implements Iterable<Name>{
 	
 	public boolean isRegisterEmpty() {
 		return (Name.isEmpty()) ? true : false;
+	}
+	
+	public void sortRegister() {
+		Collections.sort(Name);;
 	}
 	
 	@Override
