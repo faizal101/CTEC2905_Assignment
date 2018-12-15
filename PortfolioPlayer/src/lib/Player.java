@@ -85,8 +85,7 @@ public class Player implements Comparable<Player>{
 	}
 	
 	public int getDiceScore() {
-		Die die = new Die();
-		return die.getScore();
+		return this.dice.getScore();
 	}
 	
 	@Override
