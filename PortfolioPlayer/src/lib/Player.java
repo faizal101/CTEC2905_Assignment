@@ -13,7 +13,7 @@ public class Player implements Comparable<Player>{
 	
 	public Player() {
 		this.name = new Name();
-		this.PairOfDice = null;
+		this.PairOfDice = new Die();
 	}
 	
 	/** 
