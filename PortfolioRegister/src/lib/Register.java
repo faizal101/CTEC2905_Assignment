@@ -60,6 +60,9 @@ public class Register {
 		return (Name.isEmpty()) ? true : false;
 	}
 	
-	// TODO toString() method override
+	@Override
+	public String toString() {
+		return "Register:[" + Name + "]";
+	}
 	
 }
