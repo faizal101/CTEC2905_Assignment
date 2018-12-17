@@ -1,12 +1,24 @@
 package main;
 
 import java.util.ArrayList;
-
-//import lib.Name;
 import lib.Player;
 
+/**
+ * 
+ * @author Faizal
+ *
+ */
 public class PlayerApp {
 
+	/**
+	 * PlayerApp does the following:
+	 * Gets the player at index 0 of the Player ArrayList and sets the full name of the player of `fullName`
+	 * Iterates through the Player and gets the list of the full name where it contains an 'a'  
+	 * @param players The Player.
+	 * @param fullName The full name.
+	 * @return A String of all the names where it contains "a" in the following format:
+	 * "joe, Bloggs", where the first name is in lower case, followed by a comma and space (, ) add the family name in upper case, followed by a new line.  
+	 */
 	public static String execute(ArrayList<Player> players, String fullName) {
 		
 		players.get(0).setFullPlayerName(fullName);

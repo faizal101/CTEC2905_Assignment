@@ -2,6 +2,11 @@ package lib;
 
 import lib.Name;
 
+/**
+ * 
+ * @author Faizal
+ *
+ */
 public class Player implements Comparable<Player>{
 	
 	// Fields
