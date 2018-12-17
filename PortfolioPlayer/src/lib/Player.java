@@ -109,12 +109,12 @@ public class Player implements Comparable<Player>{
 	
 	/**
 	 * Compares the name of the player to another player, that is passed.
-	 * @param o The player that should be compared to.
+	 * @param other The player that should be compared to.
 	 * @return A negative integer if player is less than, a positive integer if greater or zero if equal.
 	 */
 	@Override
-	public int compareTo(Player o) {
-		return this.name.compareTo(o.name);
+	public int compareTo(Player other) {
+		return this.name.compareTo(other.name);
 	}
 	
 }

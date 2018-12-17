@@ -30,12 +30,12 @@ public class Register implements Iterable<Name>{
 	}
 	
 	/**
-	 * Removes the name from the Register at position `i`
-	 * @param i The position in the Register that should be removed.
+	 * Removes the name from the Register at position `position`
+	 * @param position The position in the Register that should be removed.
 	 * @return Removes the name in position `i` from the ArrayList.
 	 */
-	public Name removeName(int i) {
-		return Name.remove(i);
+	public Name removeName(int position) {
+		return Name.remove(position);
 	}
 	
 	/**
@@ -61,14 +61,14 @@ public class Register implements Iterable<Name>{
 	}
 	
 	/**
-	 * Iterates through the Register and counts how many occurrences of the first name ending with `c`
-	 * @param c The character that the first name should end with.
-	 * @return The number of times the first name ended with `c`.
+	 * Iterates through the Register and counts how many occurrences of the first name ending with `endsWith`
+	 * @param endsWith The character that the first name should end with.
+	 * @return The number of times the first name ended with `endsWith`.
 	 */
-	public int countFirstNameOccurrences(char c) {
+	public int countFirstNameOccurrences(char endsWith) {
 		int i = 0;
 		for (Name n : Name) {
-			if (n.getFirstName().endsWith(Character.toString(c))) {
+			if (n.getFirstName().endsWith(Character.toString(endsWith))) {
 				i++;
 			}
 		}
@@ -76,12 +76,12 @@ public class Register implements Iterable<Name>{
 	}
 	
 	/**
-	 * Gets the name from the Register at position `i`.
+	 * Gets the name from the Register at position `position`.
 	 * @param i The position on the Register.
-	 * @return The name at position `i`.
+	 * @return The name at position `position`.
 	 */
-	public Name getName(int i) {
-		return Name.get(i);
+	public Name getName(int position) {
+		return Name.get(position);
 	}
 	
 	/**
