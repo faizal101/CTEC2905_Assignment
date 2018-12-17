@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
+/**
+ * 
+ * @author Faizal
+ *
+ */
 public class Register implements Iterable<Name>{
 	
 	// Fields
